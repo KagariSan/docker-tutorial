@@ -4,6 +4,7 @@ services:
   postgresql:
     image: postgres:13.3
     environment:
+      - POSTGRES_DB=testdb
       - POSTGRES_USER=mydb
       - POSTGRES_PASSWORD=mydb
       - POSTGRES_HOST_AUTH_METHOD=trust
