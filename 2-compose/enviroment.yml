@@ -2,7 +2,7 @@
 version: '3.3'
 services:
   postgresql:
-    image: postgres:13.3
+    image: postgres:14beta3
     environment:
       - POSTGRES_DB=testdb
       - POSTGRES_USER=mydb
