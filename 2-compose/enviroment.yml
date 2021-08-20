@@ -1,0 +1,27 @@
+# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
+version: '3.8'
+services:
+  dvvs-postgresql:
+    image: postgres:13.3
+    environment:
+      - POSTGRES_USER=mydb
+      - POSTGRES_PASSWORD=mydb
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432
+    networks:
+      - database
+
+  pgadmin-dev:
+    image: dpage/pgadmin4:5.3
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin
+      PGADMIN_DEFAULT_PASSWORD: adminpassword
+      PGADMIN_CONFIG_SERVER_MODE: 'True'
+      PGADMIN_LISTEN_PORT: 8981
+    ports:
+      - 8981:8981
+    networks: 
+      - database
+networks:
+  database: {}
