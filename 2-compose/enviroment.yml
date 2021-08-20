@@ -16,7 +16,7 @@ services:
   pgadmin-dev:
     image: dpage/pgadmin4:5.3
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin
+      PGADMIN_DEFAULT_EMAIL: admin@demo.com
       PGADMIN_DEFAULT_PASSWORD: adminpassword
       PGADMIN_CONFIG_SERVER_MODE: 'True'
       PGADMIN_LISTEN_PORT: 8981
